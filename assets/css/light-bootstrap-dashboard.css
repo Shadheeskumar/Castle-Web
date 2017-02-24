@@ -13,9 +13,9 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  
  */
-@import url(https://fonts.googleapis.com/css?family=Hind); /*--- Body Font --*/
-@import url(https://fonts.googleapis.com/css?family=Nobile); /*--- Heading Font --*/
-@import url(https://fonts.googleapis.com/css?family=Questrial); /*--- Nav Font --*/
+@import url(https://fonts.googleapis.com/css?family=Hind);
+@import url(https://fonts.googleapis.com/css?family=Nobile);
+@import url(https://fonts.googleapis.com/css?family=Questrial);
 /*      light colors         */
 @keyframes spin {
   from {
