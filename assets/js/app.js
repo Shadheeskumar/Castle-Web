@@ -13,7 +13,8 @@
   const txtPassword = document.getElementById('txtPassword');
   const btnLogin = document.getElementById('btnLogin');
   const btnSignUp = document.getElementById('btnSignUp');
-
+  const txtEmail2 = document.getElementById('txtEmail2');
+  const txtPassword2 = document.getElementById('txtPassword2');
 
 
   btnLogin.addEventListener('click', e => {
@@ -28,14 +29,18 @@
 
 
   btnSignUp.addEventListener('click', e => {
-  	const email = txtEmail.value;
-  	const pass = txtPassword.value;
+  	const email = txtEmail2.value;
+  	const pass = txtPassword2.value;
   	const auth = firebase.auth();
-
+  		console.log(email);
+  		console.log(pass);
   	const promise = auth.createUserWithEmailAndPassword(email, pass);
-  	promise
-  
-  		.catch(e => console.log(e.message));
+  	promise.then(function(result) {
+  		console.log(result);
+  	}, function(err) {
+  		console.log(err);
+
+	});
 
 
   });
