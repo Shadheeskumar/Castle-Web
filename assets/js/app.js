@@ -13,7 +13,7 @@
   const txtPassword = document.getElementById('txtPassword');
   const btnLogin = document.getElementById('btnLogin');
   const btnSignUp = document.getElementById('btnSignUp');
-  const btnLogout = document.getElementById('btnLogout');
+
 
 
   btnLogin.addEventListener('click', e => {
@@ -41,11 +41,7 @@
   });
 
 
-   btnLogout.addEventListener('click', e => {
-   		firebase.auth().signOut();
-
-  	
-  });
+   
 
 
 
