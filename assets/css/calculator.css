@@ -30,10 +30,10 @@ html {
 	margin: 10px auto;
 	padding: 10px 10px 5px;
 	
-	background: #9dd2ea;
-	background: linear-gradient(#9dd2ea, #8bceec);
+	background: #e1e1e1;
+	background: linear-gradient(#e1e1e1, #dcdcdc);
 	border-radius: 3px;
-	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 4px #dcdcdc, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Top portion */
@@ -115,8 +115,8 @@ html {
 
 /* Some hover effects */
 .keys span:hover {
-	background: #9c89f6;
-	box-shadow: 0px 4px #6b54d3;
+	background: #a1a1a1;
+	box-shadow: 0px 4px #a1a1a1;
 	color: white;
 }
 
