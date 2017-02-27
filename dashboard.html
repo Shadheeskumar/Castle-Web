@@ -106,22 +106,47 @@
             <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Users Behavior</h4>
-                                <p class="category">24 Hours performance</p>
+                                <h4 class="title">Add Expenditure</h4>
                             </div>
                             <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                <form>
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Amount</label>
+                                                <input type="number" class="form-control" placeholder="Amount" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Category</label>
+                                                    <select id = "category">
+                                                    <option value = "1">one</option>
+                                                    <option value = "2">two</option>
+                                                    <option value = "3">three</option>
+                                                    <option value = "4">four</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Notes</label>
+                                                <input type="text" class="form-control" placeholder="Notes" value="">
+                                            </div>
+                                        </div>
+                                        
                                     </div>
-                                </div>
+
+                                   
+
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add</button>
+                                    <div class="clearfix"></div>
+                                </form>
                             </div>
                         </div>
                     </div>
