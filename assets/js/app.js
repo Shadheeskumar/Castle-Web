@@ -15,6 +15,9 @@
   const btnSignUp = document.getElementById('btnSignUp');
   const txtEmail2 = document.getElementById('txtEmail2');
   const txtPassword2 = document.getElementById('txtPassword2');
+  const username = document.getElementById('username');
+  const firstname = document.getElementById('firstname');
+  const lastname = document.getElementById('lastname');
 
 
   btnLogin.addEventListener('click', e => {
@@ -29,9 +32,15 @@
 
 
   btnSignUp.addEventListener('click', e => {
+    const user = username.value;
+    const fn = firstname.value;
+    const ln = lastname.value;
   	const email = txtEmail2.value;
   	const pass = txtPassword2.value;
   	const auth = firebase.auth();
+      console.log(user);
+      console.log(fn);
+      console.log(ln);
   		console.log(email);
   		console.log(pass);
   	const promise = auth.createUserWithEmailAndPassword(email, pass);
@@ -45,8 +54,7 @@
 
   });
 
-
-   
+  
 
 
 

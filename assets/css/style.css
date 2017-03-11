@@ -17,9 +17,9 @@ a{color:inherit;text-decoration:none}
 	width:100%;
 	margin:auto;
 	max-width:100%;
-	min-height:778px;
+	min-height:850px;
 	position:relative;
-	background:url(http://www.castles.org/images/sd6_small.jpg) no-repeat center center fixed;
+	background:url("../img/castle.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

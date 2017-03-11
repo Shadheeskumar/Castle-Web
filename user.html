@@ -20,19 +20,34 @@
     <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
-
-
-
-
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        const config = {
+            apiKey: "AIzaSyCmXs-IE0jb12gN2xd8i6IROpKmq8spfhs",
+            authDomain: "castle-a5dcc.firebaseapp.com",
+            databaseURL: "https://castle-a5dcc.firebaseio.com",
+            storageBucket: "castle-a5dcc.appspot.com",
+            messagingSenderId: "745453466159"
+          };
+          firebase.initializeApp(config);
+
+      window.onload = function getUserProfile() {
+        const userId = firebase.auth().currentUser.uid;
+          firebase.database().ref('/Users' + userId)
+            .once('value', (snapshot) => {
+              console.log(snapshot)
+        })
+      }
+    </script>
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="black" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="black" data-image="assets/img/castle.png">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -57,12 +72,7 @@
                         <p>User Profile</p>
                     </a>
                 </li>
-                <li>
-                    <a href="item.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Items</p>
-                    </a>
-                </li>
+                
             </ul>
     	</div>
     </div>
@@ -114,7 +124,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" placeholder="Username" value="">
+                                                <input id="username" type="text" class="form-control" placeholder="Username" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -156,10 +166,10 @@
                             <div class="content">
                                 <div class="author">
                                      <a href="#">
-                                    <img class="avatar border-gray" src=" alt="..."/>
+                                    <img class="avatar border-gray">
 
                                       <h4 class="title"><br />
-                                         <small></small>
+                                         <small id="username"></small>
                                       </h4>
                                     </a>
                                 </div>
@@ -184,7 +194,7 @@
         <footer class="footer">
             <div class="container-fluid">
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Castle</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Castle</a>
                 </p>
             </div>
         </footer>
@@ -194,8 +204,11 @@
 
 
 </body>
+    
+    
 
-    <script src="assets/js/logout.js"></script>
+    <!-- <script src="assets/js/logout.js"></script> -->
+    <!-- <script src="assets/js/user.js"></script> -->
 
     <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
